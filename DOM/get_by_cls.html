@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Qurey Slector</title>
+</head>
+
+<body>
+    <nav class="block">
+        <p class="paragraph">Welcom DOM</p>
+    </nav>
+    <dir class="block">
+        <h4>My Name is <span id="username"> Shoaib</span></h4>
+        <p class="paragraph">there is code for you</p>
+        <dir><code>console.log('hi there')</code></dir>
+    </dir>
+    <script>
+        const elements = document.getElementsByClassName('block')
+
+        console.log(elements)
+    </script>
+</body>
+
+</html>

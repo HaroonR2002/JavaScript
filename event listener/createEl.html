@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+    <style>
+        /* Center the button and container */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Style the button */
+        #button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        /* Add hover animation to the button */
+        #button:hover {
+            transform: scale(1.1);
+            /* Slightly enlarge the button */
+            background-color: #45a049;
+            /* Change the background color */
+        }
+
+        /* Add click animation to the button */
+        #button:active {
+            transform: scale(0.95);
+            /* Slightly shrink the button */
+        }
+
+        /* Center the dynamically created elements */
+        #container {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Create Element Dynamically</h1>
+    </center>
+
+    <!-- Container to hold the dynamically created elements -->
+    <div id="container"></div>
+
+    <!-- Button to trigger the creation of new elements -->
+    <button id="button">Add Number</button>
+
+    <script>
+        // Select the container element by its ID
+        const container = document.getElementById('container');
+
+        // Select the button element by its ID
+        const button = document.getElementById('button');
+
+        // Initialize a variable to keep track of the numbers
+        let number = 0;
+
+        // Add an event listener to the button to handle clicks
+        button.addEventListener('click', () => {
+            // Create a new <h1> element
+            const createEL = document.createElement("h1");
+
+            // Set the text of the <h1> element to the current number
+            createEL.innerText = `${number} : New Element Created`;
+
+            // Append the <h1> element to the container
+            container.append(createEL);
+
+            // Increment the number for the next click
+            number++;
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Query Selector</title>
+    <style>
+        .green_color {
+            color: green;
+        }
+
+        .bold_text {
+            font-weight: bold;
+        }
+
+        .large_text {
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="block">
+        <p class="paragraph">Welcome DOM</p>
+    </nav>
+    <div class="block">
+        <h4>My Name is <span id="username">Shoaib</span></h4>
+        <p class="paragraph">There is code for you</p>
+        <div><code>console.log('hi there')</code></div>
+    </div>
+
+    <script>
+        // Select the element with id 'username'
+        const ele = document.getElementById('username');
+
+        // Add the 'green_color' class to the selected element
+        ele.classList.add('green_color');
+
+        // Log the class list of the selected element to the console
+        console.log(ele.classList);
+
+        // Change the inner text of the selected element
+        ele.innerText = 'Muhammad Shoaib';
+
+        // Add another class 'bold_text' to make the text bold
+        ele.classList.add('bold_text');
+
+        // Log the updated class list of the selected element to the console
+        console.log(ele.classList);
+
+        // Remove the 'green_color' class from the selected element
+        ele.classList.remove('green_color');
+
+        // Log the final class list of the selected element to the console
+        console.log(ele.classList);
+
+        // Add a new class 'large_text' to increase the font size
+        ele.classList.add('large_text');
+
+        // Change the background color of the selected element
+        ele.style.backgroundColor = 'yellow';
+
+        // Change the font family of the selected element
+        ele.style.fontFamily = 'Arial, sans-serif';
+
+        // Log the final styles of the selected element to the console
+        console.log(ele.style);
+
+    </script>
+</body>
+
+</html>

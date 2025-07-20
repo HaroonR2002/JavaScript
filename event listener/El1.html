@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Event Listener</h1>
+    </center>
+
+    <h2>Hello I m there</h2>
+
+    <!-- First method: Inline event handler using onclick attribute -->
+    <button type="button" onclick="console.log('Button clicked')">Click me</button>
+
+    <!-- Second method: Adding event listener using JavaScript -->
+    <button id="tapMe">Tap Me</button>
+
+    <script>
+        // Select the button element with id 'tapMe'
+        const el = document.getElementById('tapMe');
+
+        // Add an event listener to the button using the onclick property
+        el.onclick = () => {
+            console.log('You tapped on the button');
+        }
+
+    </script>
+    <script>
+        // Add an event listener to the button using the onclick property
+        el.onclick = () => {
+            console.log('Hacked');
+        }
+
+    </script>
+</body>
+
+</html>

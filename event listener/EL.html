@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+
+<body>
+    <center>
+        <h1>Event Listener</h1>
+    </center>
+
+    <h2>Hello I m there</h2>
+
+    <!-- First method: Inline event handler using onclick attribute -->
+    <button type="button" onclick="console.log('Button clicked')">Click me</button>
+
+    <!-- Second method: Inline event handler calling a function -->
+    <button onclick="btnClicked()">Tap Me</button>
+
+    <script>
+        // Function to be called when the second button is clicked
+        function btnClicked() {
+            console.log('button clicked from script');
+        }
+    </script>
+
+    <script>
+        // Another function with the same name, demonstrating function overriding
+        function btnClicked() {
+            console.log('Hacked');
+        }
+    </script>
+</body>
+
+</html>

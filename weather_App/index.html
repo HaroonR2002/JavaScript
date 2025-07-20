@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        /* Center the content */
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #87CEEB, #f0f8ff);
+            animation: backgroundAnimation 5s infinite alternate;
+        }
+        /* Animate the background gradient */
+        
+        @keyframes backgroundAnimation {
+            0% {
+                background: linear-gradient(to bottom, #87CEEB, #f0f8ff);
+            }
+            100% {
+                background: linear-gradient(to bottom, #1E90FF, #ADD8E6);
+            }
+        }
+        /* Style the heading */
+        
+        h1 {
+            font-size: 3rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-in-out;
+        }
+        /* Fade-in animation for the heading */
+        
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Style the input field */
+        
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1rem;
+            border: 2px solid #1E90FF;
+            border-radius: 5px;
+            outline: none;
+            margin: 10px 0;
+            transition: box-shadow 0.3s ease;
+        }
+        /* Add focus effect to the input field */
+        
+        input[type="text"]:focus {
+            box-shadow: 0 0 10px #1E90FF;
+        }
+        /* Style the button */
+        
+        #button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #1E90FF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        /* Add hover animation to the button */
+        
+        #button:hover {
+            transform: scale(1.1);
+            background-color: #0688f3;
+        }
+        /* Add click animation to the button */
+        
+        #button:active {
+            transform: scale(0.95);
+        }
+        /* Style the weather card */
+        
+        .weather-card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        /* Style the weather information */
+        
+        .weather-info {
+            margin: 10px 0;
+            color: #333;
+            font-size: 1.2rem;
+        }
+        /* Add animation to weather properties */
+        
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        
+        <h1>Weather App</h1>
+    </center>
+    <input id="cityName" type="text" placeholder="Enter city name">
+    <button id="button">Check Weather</button>
+    
+    <!-- Weather information card -->
+    <didv class="weather-card">
+        <h3 id="location" class="weather-info">Location: </h3>
+        <h3 id="temp" class="weather-info">Temperature: </h3>
+        <h4 id="time" class="weather-info">Time: </h4>
+        <h4 id="humidity" class="weather-info">Humidity: </h4>
+        <h4 id="wind" class="weather-info">Wind Speed: </h4>
+        <h4 id="condition" class="weather-info">Condition: </h4>
+    </didv>
+    
+    <p>Not a complete app, just for concepts and logics.</p>
+    <p>Take care!<br/>Regards: Haroon</p>
+    <script src="script.js"></script>
+</body>
+
+</html>

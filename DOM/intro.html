@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Qurey Slector</title>
+</head>
+
+<body>
+    <nav class="block">
+        <p class="paragraph">Welcom DOM</p>
+    </nav>
+    <dir class="block">
+        <h4>My Name is <span id="username"> Shoaib</span></h4>
+        <p class="paragraph">there is code for you</p>
+        <dir><code>console.log('hi there')</code></dir>
+    </dir>
+    <script>
+        //qurey slector  - First Element
+        /*
+        - tap name 
+        - id #
+        - class .
+        */
+
+        // //tap name 
+        // const body = document.querySelector("body")
+        // body.innerHTML = "<h1>Hecked!!</h1>"
+
+
+        // //id #
+        // const username = document.querySelector("#username");
+        // username.innerHTML = '<h1>Muhammad shoaib</h1>'
+
+        //class .
+        const block = document.querySelector(".block")
+        block.innerHTML = '<h1>Hi Blocks</h1>'
+
+
+
+    </script>
+</body>
+
+</html>

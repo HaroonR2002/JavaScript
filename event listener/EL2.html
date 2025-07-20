@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener Example</title>
+</head>
+
+<body>
+    <center>
+        <h1 id="header">Event Listener</h1>
+    </center>
+    <h2 class="block">Hi, I am here</h2>
+    <button id="tapMe">Tap Me</button>
+    <center><button id="changeColor">Change Colors</button></center>
+
+    <script>
+        // Select the header element by its ID
+        const header = document.getElementById('header');
+
+        // Select the "Change Colors" button by its ID
+        const changeColorButton = document.getElementById('changeColor');
+        //colors list 
+        const color = ['red', 'blue', 'green', 'yellow', 'black', 'pink']
+        let colorIndex = 0
+        // Add an event listener to the "Change Colors" button
+        changeColorButton.addEventListener('click', () => {
+
+            // Change the text color of the header element
+
+            header.style.color = color[colorIndex]
+            console.log(`Header color changed to  ${color[colorIndex]}`);
+            colorIndex = (colorIndex + 1) % color.length
+        });
+
+        // Select the "Tap Me" button by its ID
+        const tapMeButton = document.getElementById('tapMe');
+
+        // Add an event listener to the "Tap Me" button
+        tapMeButton.addEventListener('click', () => {
+            console.log('Tap Me button clicked!');
+        });
+
+        // Add another event listener to the "Tap Me" button // run both commands 
+        tapMeButton.addEventListener('click', () => {
+            console.log('Hacked!');
+        });
+
+    </script>
+</body>
+
+</html>
