@@ -22,7 +22,7 @@ Whether you're just starting or looking to level up your skills, this guide is y
 
 ---
 
-👨‍💻 Who This Is For:
+## 👨‍💻 Who This Is For:
 
 🔹 Aspiring developers building a solid JavaScript foundation
 🔹 Intermediate devs ready to tackle advanced concepts
